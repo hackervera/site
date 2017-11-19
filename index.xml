@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kodo à la mode</title>
+    <link>/</link>
+    <description>Recent content on Kodo à la mode</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 31 Jul 2017 23:21:04 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>IndieWeb magick with static sites and IPFS</title>
+      <link>/posts/indieweb/</link>
+      <pubDate>Mon, 31 Jul 2017 23:21:04 +0000</pubDate>
+      
+      <guid>/posts/indieweb/</guid>
+      <description>I&amp;rsquo;ve been playing around with IPFS, Hugo, and IndieWeb to publish this site.
+I&amp;rsquo;ve configured NGINX to serve my site from IPFS using the local daemon that gets installed on port 8080.
+Here is my config
+# /etc/nginx/nginx.conf server { listen 80 default_server; location / { proxy_pass http://localhost:8080/ipns/Qmc9UjSn1TksQdMsDKrNgbwLhAtWZ1J9Cu4it4addUEpwC/; } }  Qmc9UjSn1TksQdMsDKrNgbwLhAtWZ1J9Cu4it4addUEpwC refers to my IPNS key which works kinda like DNS, in that, it is a static address that resolves to dynamic content.</description>
+    </item>
+    
+    <item>
+      <title>Holy heatwave batman</title>
+      <link>/posts/heatwave/</link>
+      <pubDate>Mon, 31 Jul 2017 20:24:09 +0000</pubDate>
+      
+      <guid>/posts/heatwave/</guid>
+      <description>What is with this heat wave? &amp;hellip;Seriously. Wednesday is supposed to be the hottest day in Portland history.
+Global warming is a hoax tho, right? Lul.</description>
+    </item>
+    
+    <item>
+      <title>Friend Race</title>
+      <link>/posts/friend-race/</link>
+      <pubDate>Sat, 29 Jul 2017 22:08:56 -0700</pubDate>
+      
+      <guid>/posts/friend-race/</guid>
+      <description>Watching RuPaul&amp;rsquo;s Drag Race. Category is: &amp;ldquo;Parent&amp;rsquo;s night out&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title>Post nap time</title>
+      <link>/posts/post-nap-time/</link>
+      <pubDate>Sat, 29 Jul 2017 16:36:46 -0700</pubDate>
+      
+      <guid>/posts/post-nap-time/</guid>
+      <description>Gemma is finished with her nap and watching her show.</description>
+    </item>
+    
+    <item>
+      <title>First Post</title>
+      <link>/posts/first-post/</link>
+      <pubDate>Sat, 29 Jul 2017 15:29:14 -0700</pubDate>
+      
+      <guid>/posts/first-post/</guid>
+      <description>Heather, Gemma &amp;amp; I went to the playground this morning.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+
+  <link rel="authorization_endpoint" 
+        href="https://indieauth.com/auth">
+  
+  <link href='https://github.com/tjgillies' rel='me'>
+
+  <link rel="webmention" href="https://webmention.herokuapp.com/api/webmention" />
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.31-DEV" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+  <title>Kodo à la mode</title>
+  
+
+  
+  <link rel="stylesheet" href="./css/print.css" media="print">
+  <link rel="stylesheet" href="./css/poole.css">
+  <link rel="stylesheet" href="./css/syntax.css">
+  <link rel="stylesheet" href="./css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="./favicon.png">
+
+  
+  <link href="./index.xml" rel="alternate" type="application/rss+xml" title="Kodo à la mode" />
+</head>
+
+<body class=" ">
+
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="./"><h1>Kodo à la mode</h1></a>
+      <p class="lead">
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="">Home</a> </li>
+      
+    </ul>
+
+    <p>&copy; <span class='h-card p-author'><a href="./" class="u-url u-uid"></a>Tyler Gillies</span> 2017.<br> All rights reserved. </p>
+  </div>
+</div>
+
+
+    <div class="content container">
+<div class="posts">
+
+      
+  <div class="post">
+    <h1 class="post-title">
+      <a href="./posts/indieweb/">
+        IndieWeb magick with static sites and IPFS
+      </a>
+    </h1>
+
+    <span class="post-date">Mon, Jul 31, 2017</span>
+
+    <p>I&rsquo;ve been playing around with <a href="//ipfs.io">IPFS</a>, <a href="https://gohugo.io/">Hugo</a>, and <a href="//indieweb.org">IndieWeb</a> to publish this site.</p>
+
+<p>I&rsquo;ve configured NGINX to serve my site from IPFS using the local daemon that gets installed on port 8080.</p>
+
+<p>Here is my config</p>
+
+<pre><code># /etc/nginx/nginx.conf
+
+server {
+    listen 80 default_server;
+    location / {
+        proxy_pass http://localhost:8080/ipns/Qmc9UjSn1TksQdMsDKrNgbwLhAtWZ1J9Cu4it4addUEpwC/;
+    }
+}
+</code></pre>
+
+<p><code>Qmc9UjSn1TksQdMsDKrNgbwLhAtWZ1J9Cu4it4addUEpwC</code> refers to my IPNS key which works kinda like DNS, in that, it is a static address
+that resolves to dynamic content.</p>
+
+<p>I publish my static folder like <code>ipfs add -r $PUBLIC_DIR</code> and then <code>ipfs name publish $GENERATED_HASH</code> on the hash that gets generated from the add command.
+This publishes the generated hash to my static key.</p>
+
+<p>You can visit this site on a different IPFS gateway by going to <a href="http://dweb.link/ipfs/">http://dweb.link/ipfs/</a> and appending the hash that appears at the bottom of this post to the url.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="./posts/heatwave/">
+        Holy heatwave batman
+      </a>
+    </h1>
+
+    <span class="post-date">Mon, Jul 31, 2017</span>
+
+    <p>What is with this heat wave? &hellip;Seriously. Wednesday is supposed to be the hottest day in Portland history.</p>
+
+<p>Global warming is a hoax tho, right? Lul.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="./posts/friend-race/">
+        Friend Race
+      </a>
+    </h1>
+
+    <span class="post-date">Sat, Jul 29, 2017</span>
+
+    <p>Watching RuPaul&rsquo;s Drag Race. Category is: &ldquo;Parent&rsquo;s night out&rdquo;</p>
+
+<p><img src="./images/rupaul.jpg" alt="visage" /></p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="./posts/post-nap-time/">
+        Post nap time
+      </a>
+    </h1>
+
+    <span class="post-date">Sat, Jul 29, 2017</span>
+
+    <p>Gemma is finished with her nap and watching her show.</p>
+
+<p><img src="./images/post-nap.jpg" alt="watching her show" /></p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="./posts/first-post/">
+        First Post
+      </a>
+    </h1>
+
+    <span class="post-date">Sat, Jul 29, 2017</span>
+
+    <p>Heather, Gemma &amp; I went to the playground this morning.</p>
+
+<p><img src="./images/playground.jpg" alt="playground" /></p>
+
+  </div>
+  
+</div>
+</div>
+
+  </body>
+</html>
